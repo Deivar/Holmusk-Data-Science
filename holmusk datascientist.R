@@ -425,7 +425,7 @@ summary(lm.0)
 
 
 
-### The lasso 
+### The elastic net 
 
 
 #chi squared test
@@ -500,7 +500,8 @@ y.pred$actual <- pbc.no.naTest$amount
 tail(y.pred)
 y.pred$percentdiff <- ((y.pred$actual - y.pred$predicted)/y.pred$actual)*100
 mean(abs(y.pred$percentdiff))
+#rmse
 sqrt(mean((y.pred$actual - y.pred$predicted)^2))
-
+#mape
 mean(y.pred$actual - y.pred$predicted)
 
